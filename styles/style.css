@@ -362,7 +362,7 @@ footer .final p:last-child {
 }
 
 @media screen and (max-width: 850px) {
-	section.things .category .product {
+	section.things .category {
 		width: 50%;
 	}
 }
@@ -382,7 +382,7 @@ footer .final p:last-child {
 }
 
 @media screen and (max-width: 580px) {
-	section.things .category .product {
+	section.things .category {
 		width: 100%;
 		float: none;
 	}
