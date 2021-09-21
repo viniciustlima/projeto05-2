@@ -114,6 +114,7 @@ section.banner a {
 	position: absolute;
 	top: 50%;
 	right: 250px;
+	text-align: right;
 	transform: translateY(-50%);
 	font-size: 24px;
 	padding: 10px 15px;
@@ -122,6 +123,7 @@ section.banner a {
 	border-radius: 12px;
 	color: #2b2b2b;
 	background: #ffffff;
+	display: inline-block;
 }
 
 section.flag {
@@ -399,5 +401,12 @@ footer .final p:last-child {
 
 	footer .final p:last-child {
 		float: none;
+	}
+
+	section.banner a {
+		position: unset;
+		top: 0;
+		right: 0;
+		margin-top: calc(750px - 100%);
 	}
 }
