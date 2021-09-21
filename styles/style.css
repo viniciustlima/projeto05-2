@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.center {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 2%;
+}
+
+.clear {
+	clear: both;
+}
+
+div.w33 {
+	width: 33.3%;
+}
+
+div.left {
+	float: left;
+}
+
+header {
+	width: 100%;
+	background: #fff;
+	padding: 20px 0;
+}
+
+header .logo {
+	float: left;
+}
+
+header .logo a {
+	font-size: 34px;
+	color: #2b2b2b;
+	text-decoration: none;
+}
+
+header .mob-button {
+	display: none;
+	float: right;
+	font-size: 32px;
+	color: #2b2b2b;
+	margin: 0 15px;
+	cursor: pointer;
+}
+
+section.mobile {
+	display: none;
+	background: #fff;
+}
+
+section.mobile nav.mobile ul {
+	width: 100%;
+	list-style-type: none;
+	display: none;
+	padding: 10px 0;
+}
+
+section.mobile nav.mobile li {
+	text-align: center;
+	padding: 15px 0;
+	width: 70%;
+	margin: 0 auto;
+}
+
+section.mobile nav.mobile li:not(:last-child) {
+	border-bottom: 2px solid #2b2b2b;
+}
+
+section.mobile nav.mobile li a {
+	color: #2b2b2b;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+header nav.desktop {
+	float: right;
+}
+
+header nav.desktop li {
+	display: inline-block;
+	padding: 10px 15px;
+}
+
+header nav.desktop li a {
+	text-decoration: none;
+	font-size: 18px;
+	color: #2b2b2b;
+}
+
+section.banner {
+	width: 100%;
+	height: 750px;
+	background-image: url("../images/banner.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+section.banner a {
+	position: absolute;
+	top: 50%;
+	right: 250px;
+	transform: translateY(-50%);
+	font-size: 24px;
+	padding: 10px 15px;
+	border: 3px solid #2b2b2b;
+	text-decoration: none;
+	border-radius: 12px;
+	color: #2b2b2b;
+	background: #ffffff;
+}
+
+section.flag {
+	margin: 20px 0;
+	padding: 30px 0;
+	background: #eaeaea;
+	text-align: center;
+}
+
+section.flag h2 {
+	font-size: 32px;
+	color: #2b2b2b;
+	font-weight: 300;
+}
+
+section.flag h4 {
+	margin-top: 8px;
+	font-size: 20px;
+	color: #2b2b2b;
+	font-weight: 300;
+}
+
+section.things {
+	padding: 20px 0;
+}
+
+section.things .title {
+	padding: 30px 0;
+	text-align: center;
+}
+
+section.things .title h2 {
+	font-size: 28px;
+	color: #2b2b2b;
+	font-weight: 400;
+}
+
+section.things .title p {
+	font-size: 20px;
+	color: #2b2b2b;
+	font-weight: 300;
+}
+
+section.things .category {
+	padding: 20px 0;
+	position: relative;
+}
+
+section.things .category .info {
+	text-align: center;
+	margin: 0 auto;
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+section.things .category h2 {
+	font-size: 22px;
+	color: #2b2b2b;
+	font-weight: 400;
+	padding: 10px 15px;	
+	width: 100%;
+	display: block;
+	background: #fff;
+}
+
+section.things .category span {
+	font-size: 15px;
+	color: #fff;
+}
+
+section.things .category {
+	padding: 25px 70px;
+	text-align: center;
+}
+
+section.things .category .wrapper {
+	width: 100%;
+	height: 450px;
+	background: #2b2b2b;
+	background-size: 315px 450px;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: .5s;
+	position: relative;
+}
+
+section.things .category .wrapper:hover {
+	background-size: 355px 505px;
+}
+
+section.things .category a {
+	display: block;
+}
+
+section.things .category .img {
+	width: 250px;
+	height: 350px;
+	background: #2b2b2b;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+
+footer {
+	border-top: 1px solid #2b2b2b;
+	color: #2b2b2b;
+}
+
+footer .start {
+	padding: 20px 0;
+	background: #fff;
+}
+
+footer .start .section {
+	width: 33.3%;
+	float: left;
+	padding: 10px;
+}
+
+footer .start .section h2 {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+footer .start .section p {
+	font-size: 17px;
+	font-weight: 300;
+	margin: 8px 15px;
+}
+
+footer .start .section .social {
+	padding: 10px 0;
+}
+
+footer .start .section .social .ico {
+	float: left;
+	margin: 0 25px;
+	text-decoration: none;
+}
+
+footer .start .section .social .ico svg,
+footer .start .section .social .ico i {
+	font-size: 34px;
+	color: #2b2b2b;
+}
+
+footer .start .section ul {
+	list-style-type: none;
+}
+
+footer .start .section li {
+	font-size: 17px;
+	font-weight: 300;
+	margin: 8px 15px;
+}
+
+footer .start .section .newsletter {
+	margin: 10px 20px;
+}
+
+footer .start .section .newsletter input[type=email] {
+	background: transparent;
+	border: 0;
+	font-size: 18px;
+	color: #2b2b2b;
+	padding: 0 10px;
+	border-bottom: 1px solid #2b2b2b;
+	margin-right: 10px;
+}
+
+footer .start .section .newsletter input[type=email]:focus {
+	outline: 0;
+}
+
+footer .start .section .newsletter button {
+	background: transparent;
+	border: 0;
+}
+
+footer .start .section .newsletter button i,
+footer .start .section .newsletter button svg {
+	font-size: 22px;
+	color: #2b2b2b;
+}
+
+footer .final {
+	padding: 20px 0;
+	background: #eaeaea;
+	font-size: 18px;
+}
+
+footer .final p:first-child {
+	float: left;
+}
+
+footer .final p:last-child {
+	float: right;
+} 
+
+.warn {
+	width: 100%;
+	text-align: center;
+	background: #efd7ff;
+	padding: 8px 0;
+}
+
+.warn a {
+	text-decoration: none;
+	font-size: 16px;
+	color: #2b2b2b;
+}
+
+.warn span {
+	font-weight: 600;
+}
+
+@media screen and (max-width: 1080px) {
+	footer .start .section {
+		width: 100%;
+		float: none;
+		text-align: center
+	}
+
+	footer .start .section .social {
+		margin: 0 auto;
+	}
+
+	footer .start .section .social .ico {
+		float: none;
+	}
+
+	footer .start .section p {
+		max-width: 450px;
+		margin: 0 auto;
+	}
+
+}
+
+@media screen and (max-width: 850px) {
+	section.things .category .product {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 732px) {
+	header nav.desktop {
+		display: none;
+	}
+
+	header .mob-button {
+		display: block
+	}
+
+	section.mobile {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	section.things .category .product {
+		width: 100%;
+		float: none;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	footer .final {
+		text-align: center;
+	}
+
+  footer .final p:first-child {
+		float: none;
+	}
+
+	footer .final p:last-child {
+		float: none;
+	}
+}
