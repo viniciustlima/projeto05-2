@@ -1,0 +1,13 @@
+section.accessories {
+	padding: 20px 0;
+}
+
+aside {
+	background: yellow;
+	width: 300px;
+}
+
+main {
+	width: calc(100% - 300px);
+	background-color: red;
+}

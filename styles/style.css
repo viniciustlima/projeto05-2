@@ -32,6 +32,10 @@ div.left {
 	float: left;
 }
 
+div.right {
+	float: right;
+}
+
 header {
 	width: 100%;
 	background: #fff;
