@@ -74,6 +74,7 @@ section.mobile nav.mobile li {
 	padding: 15px 0;
 	width: 70%;
 	margin: 0 auto;
+	max-width: 400px;
 }
 
 section.mobile nav.mobile li:not(:last-child) {
@@ -367,14 +368,7 @@ footer .final p:last-child {
 
 }
 
-@media screen and (max-width: 768px) {
-	section.things .category {
-		width: 100%;
-		float: none;
-	}
-}
-
-@media screen and (max-width: 732px) {
+@media screen and (max-width: 820px) {
 	header nav.desktop {
 		display: none;
 	}
@@ -388,6 +382,12 @@ footer .final p:last-child {
 	}
 }
 
+@media screen and (max-width: 768px) {
+	section.things .category {
+		width: 100%;
+		float: none;
+	}
+}
 
 @media screen and (max-width: 430px) {
 	footer .final {
