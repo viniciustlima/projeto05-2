@@ -204,12 +204,11 @@ section.things .category .wrapper {
 	background-size: 315px 450px;
 	background-position: center;
 	background-repeat: no-repeat;
-	transition: .5s;
-	position: relative;
+	transition: .75s;
 }
 
 section.things .category .wrapper:hover {
-	background-size: 355px 505px;
+	background-size: calc(315px + 50px) calc(450px + 70px);
 }
 
 section.things .category a {
