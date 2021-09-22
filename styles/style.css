@@ -204,7 +204,7 @@ section.things .category {
 section.things .category .wrapper {
 	width: 100%;
 	height: 450px;
-	background: #fff;
+	background: transparent;
 	background-size: 315px 450px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -342,6 +342,10 @@ footer .final p:last-child {
 }
 
 @media screen and (max-width: 1080px) {
+	section.things .category {
+		width: 50%;
+	}
+
 	footer .start .section {
 		width: 100%;
 		float: none;
@@ -363,9 +367,10 @@ footer .final p:last-child {
 
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 768px) {
 	section.things .category {
-		width: 50%;
+		width: 100%;
+		float: none;
 	}
 }
 
@@ -383,12 +388,6 @@ footer .final p:last-child {
 	}
 }
 
-@media screen and (max-width: 580px) {
-	section.things .category {
-		width: 100%;
-		float: none;
-	}
-}
 
 @media screen and (max-width: 430px) {
 	footer .final {
