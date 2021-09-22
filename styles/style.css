@@ -135,16 +135,9 @@ section.flag {
 }
 
 section.flag h2 {
-	font-size: 32px;
+	font-size: 36px;
 	color: #2b2b2b;
-	font-weight: 300;
-}
-
-section.flag h4 {
-	margin-top: 8px;
-	font-size: 20px;
-	color: #2b2b2b;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 section.things {
@@ -166,6 +159,8 @@ section.things .title p {
 	font-size: 20px;
 	color: #2b2b2b;
 	font-weight: 300;
+	margin: 10px auto;
+	max-width: 600px;
 }
 
 section.things .category {
@@ -280,6 +275,11 @@ footer .start .section li {
 	font-size: 17px;
 	font-weight: 300;
 	margin: 8px 15px;
+}
+
+footer .start .section li a {
+	color: #2b2b2b;
+	text-decoration: none;
 }
 
 footer .start .section .newsletter {
