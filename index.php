@@ -42,7 +42,7 @@
 					<li><a <?php getMenu($url, 'man') ?> href="<?= INCLUDE_PATH ?>man">Man</a></li>
 					<li><a <?php getMenu($url, 'children') ?> href="<?= INCLUDE_PATH ?>children">Children</a></li>
 					<li><a <?php getMenu($url, 'new-account') ?> href="<?= INCLUDE_PATH ?>new-account"><i class="far fa-user"></i></a></li>
-					<li><a <?php getMenu($url, 'cart') ?> href="<?= INCLUDE_PATH ?>new-account"><i class="far fa-shopping-cart"></i></a></li>
+					<li><a <?php getMenu($url, 'cart') ?> href="<?= INCLUDE_PATH ?>cart"><i class="far fa-shopping-cart"></i></a></li>
 				</ul>
 			</nav>
 			<div class="mob-button">
@@ -63,7 +63,7 @@
 					<li><a <?php getMenu($url, 'man') ?> href="<?= INCLUDE_PATH ?>man">Man</a></li>
 					<li><a <?php getMenu($url, 'children') ?> href="<?= INCLUDE_PATH ?>children">Children</a></li>
 					<li><a <?php getMenu($url, 'new-account') ?> href="<?= INCLUDE_PATH ?>new-account"><i class="far fa-user"></i></a></li>
-					<li><a <?php getMenu($url, 'cart') ?> href="<?= INCLUDE_PATH ?>new-account"><i class="far fa-shopping-cart"></i></a></li>
+					<li><a <?php getMenu($url, 'cart') ?> href="<?= INCLUDE_PATH ?>cart"><i class="far fa-shopping-cart"></i></a></li>
 				</ul>
 			</nav>
 		</div>

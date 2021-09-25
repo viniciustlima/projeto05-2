@@ -167,11 +167,6 @@ section.things .title p {
 	max-width: 600px;
 }
 
-section.things .category {
-	padding: 20px 0;
-	position: relative;
-}
-
 section.things .category .info {
 	text-align: center;
 	margin: 0 auto;
@@ -199,6 +194,7 @@ section.things .category span {
 section.things .category {
 	padding: 25px 70px;
 	text-align: center;
+	position: relative;
 }
 
 section.things .category .wrapper {
@@ -217,14 +213,6 @@ section.things .category .wrapper:hover {
 
 section.things .category a {
 	display: block;
-}
-
-section.things .category .img {
-	width: 250px;
-	height: 350px;
-	background: #2b2b2b;
-	margin: 0 auto;
-	border-radius: 10px;
 }
 
 footer {
@@ -371,7 +359,7 @@ footer .final p:last-child {
 
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 930px) {
 	header nav.desktop {
 		display: none;
 	}

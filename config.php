@@ -11,8 +11,8 @@
   
   spl_autoload_register($auto_load);
 
-  const INCLUDE_PATH = 'http://localhost/projeto-05/';
-  const INCLUDE_PATH_DASHBOARD = 'http://localhost/projeto-05/dashboard/';
+  const INCLUDE_PATH = 'http://10.0.0.62/projeto05-2/';
+  const INCLUDE_PATH_DASHBOARD = 'http://localhost/projeto05-2/dashboard/';
 
   function getMenu($url, $page) {
   	if ($url == $page) {
