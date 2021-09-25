@@ -1,3 +1,5 @@
+<?php include "./config.php"; ?>
+<?php $url = isset($_GET["url"]) ? $_GET["url"] : "home"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,7 @@
 	<meta name="description" content="Website description">
 	<meta name="author" content="FH Mídia">
 	<meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
+ 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="robots" content="index,follow">
 	<meta name="theme-color" content="#ffffff">
 	<meta name="format-detection" content="telephone=no">
@@ -19,8 +21,8 @@
 	<meta property="og:description" content="Website description">
 	<meta property="og:url" content="clothingstore.com">
 
-	<link rel="stylesheet" href="./styles/style.css">
-	<link rel="stylesheet" href="./styles/page.css">
+	<link rel="stylesheet" href="<?= INCLUDE_PATH ?>styles/style.css">
+	<link rel="stylesheet" href="<?= INCLUDE_PATH ?>styles/page.css">
 </head>
 <body>
 	<div class="warn">
@@ -29,18 +31,18 @@
 	<header>
 		<div class="center">
 			<div class="logo">
-				<a href="#">Brand Logo</a>
+				<a href="">Brand Logo</a>
 			</div>
 			<nav class="desktop">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Accessories</a></li>
-					<li><a href="#">Jewerly</a></li>
-					<li><a href="#">Woman</a></li>
-					<li><a href="#">Man</a></li>
-					<li><a href="#">Children</a></li>
-					<li><a href="#"><i class="far fa-user"></i></a></li>
-					<li><a href="#"><i class="far fa-shopping-cart"></i></a></li>
+					<li><a<?php getMenu($url, "home") ?> href="<?= INCLUDE_PATH ?>">Home</a></li>
+					<li><a<?php getMenu($url, "accessories") ?> href="<?= INCLUDE_PATH ?>accessories">Accessories</a></li>
+					<li><a<?php getMenu($url, "jewerly") ?> href="<?= INCLUDE_PATH ?>jewerly">Jewerly</a></li>
+					<li><a<?php getMenu($url, "woman") ?> href="<?= INCLUDE_PATH ?>woman">Woman</a></li>
+					<li><a<?php getMenu($url, "man") ?> href="<?= INCLUDE_PATH ?>man">Man</a></li>
+					<li><a<?php getMenu($url, "children") ?> href="<?= INCLUDE_PATH ?>children">Children</a></li>
+					<li><a<?php getMenu($url, "new-acount") ?> href="<?= INCLUDE_PATH ?>new-account"><i class="far fa-user"></i></a></li>
+					<li><a<?php getMenu($url, "cart") ?> href="<?= INCLUDE_PATH ?>cart"><i class="far fa-shopping-cart"></i></a></li>
 				</ul>
 			</nav>
 			<div class="mob-button">
@@ -54,85 +56,26 @@
 		<div class="center">
 			<nav class="mobile">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Accessories</a></li>
-					<li><a href="#">Jewerly</a></li>
-					<li><a href="#">Woman</a></li>
-					<li><a href="#">Man</a></li>
-					<li><a href="#">Children</a></li>
-					<li><a href="#"><i class="far fa-user"></i></a></li>
-					<li><a href="#"><i class="far fa-shopping-cart"></i></a></li>
+					<li><a<?php getMenu($url, "home") ?> href="<?= INCLUDE_PATH ?>">Home</a></li>
+					<li><a<?php getMenu($url, "accessories") ?> href="<?= INCLUDE_PATH ?>accessories">Accessories</a></li>
+					<li><a<?php getMenu($url, "jewerly") ?> href="<?= INCLUDE_PATH ?>jewerly">Jewerly</a></li>
+					<li><a<?php getMenu($url, "woman") ?> href="<?= INCLUDE_PATH ?>woman">Woman</a></li>
+					<li><a<?php getMenu($url, "man") ?> href="<?= INCLUDE_PATH ?>man">Man</a></li>
+					<li><a<?php getMenu($url, "children") ?> href="<?= INCLUDE_PATH ?>children">Children</a></li>
+					<li><a<?php getMenu($url, "new-acount") ?> href="<?= INCLUDE_PATH ?>new-account"><i class="far fa-user"></i></a></li>
+					<li><a<?php getMenu($url, "cart") ?> href="<?= INCLUDE_PATH ?>cart"><i class="far fa-shopping-cart"></i></a></li>
 				</ul>
 			</nav>
 		</div>
 	</section>
 
-	<section class="banner">
-		<div class="center">
-			<a href="shop">Shop Now</a>
-		</div>
-	</section>
-
-	<section class="flag">
-		<div class="center">
-			<h2>Find the style that suits you.</h2>
-		</div>
-	</section>
-
-	<section class="things">
-		<div class="center">
-			<div class="title">
-				<h2>All clothing styles and accessories you can imagine.</h2>
-				<p>Here you will find several styles of clothing and accessories that suit you, take a look at the most visited categories in our store.</p>
-			</div>
-
-			<div class="category w33 left">
-				<a href="#" style="background-image: url('./images/bracelets.jpg');" class="wrapper">	
-					<div class="info">
-						<h2>Bracelets</h2>
-						<span>Acessories</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="category w33 left">
-				<a href="#" style="background-image: url('./images/rings.jpg');" class="wrapper">	
-					<div class="info">
-						<h2>Rings</h2>
-						<span>Jewerly</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="category w33 left">
-				<a href="#" style="background-image: url('./images/dresses.jpg');" class="wrapper">	
-					<div class="info">
-						<h2>Dresses</h2>
-						<span>Woman</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="category w33 left">
-				<a href="#" style="background-image: url('./images/suits.jpg');" class="wrapper">	
-					<div class="info">
-						<h2>Suits</h2>
-						<span>Man</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="category w33 left">
-				<a href="#" style="background-image: url('./images/costumes.jpg');" class="wrapper">	
-					<div class="info">
-						<h2>Costumes</h2>
-						<span>Children</span>
-					</div>
-				</a>
-			</div>
-			<div class="clear"></div>
-		</div>
-	</section>
+	<?php 
+		if (file_exists("pages/$url.php")) {
+			include "pages/$url.php";
+		} else {
+			include "pages/error.php";
+		}
+	?>
 
 	<footer>
 		<div class="start">
@@ -161,11 +104,11 @@
 				<div class="section">
 					<h2>Help and Support</h2>
 					<ul>
-						<li><a href="#">Meet [company name]</a></li>
-						<li><a href="#">Size Guide</a></li>
-						<li><a href="#">Exchanges and Return</a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#">Privacity</a></li>
+						<li><a href="<?= INCLUDE_PATH ?>help/about-us">Meet [company name]</a></li>
+						<li><a href="<?= INCLUDE_PATH ?>help/size-guide">Size Guide</a></li>
+						<li><a href="<?= INCLUDE_PATH ?>help/exchanges-and-returns">Exchanges and Return</a></li>
+						<li><a href="<?= INCLUDE_PATH ?>help/support"></a></li>
+						<li><a href="<?= INCLUDE_PATH ?>help/privacity">Privacity</a></li>
 					</ul>
 				</div>
 				<div class="section">
@@ -191,7 +134,7 @@
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-	<script src="./scripts/fontawesome.js"></script>
-	<script src="./scripts/menu.js"></script>
+	<script src="<?= INCLUDE_PATH ?>scripts/fontawesome.js"></script>
+	<script src="<?= INCLUDE_PATH ?>scripts/menu.js"></script>
 </body>
 </html>
