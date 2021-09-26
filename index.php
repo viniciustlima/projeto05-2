@@ -23,25 +23,28 @@
 
 	<link rel="stylesheet" href="<?= INCLUDE_PATH ?>styles/style.css">
 	<link rel="stylesheet" href="<?= INCLUDE_PATH ?>styles/page.css">
+	<link rel="stylesheet" href="<?= INCLUDE_PATH ?>styles/login.css">
 </head>
 <body>
-	<div class="warn">
-		<a href="new/diamonds">Check our new <span>diamond</span> collection</a>
-	</div>
+	<?php if ($url == "home" || $url == "account") { ?>
+		<div class="warn">
+			<a href="new/diamonds">Check our new <span>diamond</span> collection</a>
+		</div>
+	<?php } ?>
 	<header>
 		<div class="center">
 			<div class="logo">
-				<a href="">Brand Logo</a>
+				<a href="<?= INCLUDE_PATH ?>home">Brand Logo</a>
 			</div>
 			<nav class="desktop">
 				<ul>
-					<li><a<?php getMenu($url, "home") ?> href="<?= INCLUDE_PATH ?>">Home</a></li>
+					<li><a<?php getMenu($url, "home") ?> href="<?= INCLUDE_PATH ?>home">Home</a></li>
 					<li><a<?php getMenu($url, "accessories") ?> href="<?= INCLUDE_PATH ?>accessories">Accessories</a></li>
 					<li><a<?php getMenu($url, "jewerly") ?> href="<?= INCLUDE_PATH ?>jewerly">Jewerly</a></li>
 					<li><a<?php getMenu($url, "woman") ?> href="<?= INCLUDE_PATH ?>woman">Woman</a></li>
 					<li><a<?php getMenu($url, "man") ?> href="<?= INCLUDE_PATH ?>man">Man</a></li>
 					<li><a<?php getMenu($url, "children") ?> href="<?= INCLUDE_PATH ?>children">Children</a></li>
-					<li><a<?php getMenu($url, "new-acount") ?> href="<?= INCLUDE_PATH ?>new-account"><i class="far fa-user"></i></a></li>
+					<li><a<?php getMenu($url, "signin") ?> href="<?= INCLUDE_PATH ?>signin"><i class="far fa-user"></i></a></li>
 					<li><a<?php getMenu($url, "cart") ?> href="<?= INCLUDE_PATH ?>cart"><i class="far fa-shopping-cart"></i></a></li>
 				</ul>
 			</nav>
@@ -56,13 +59,17 @@
 		<div class="center">
 			<nav class="mobile">
 				<ul>
-					<li><a<?php getMenu($url, "home") ?> href="<?= INCLUDE_PATH ?>">Home</a></li>
+					<li><a<?php getMenu($url, "home") ?> href="<?= INCLUDE_PATH ?>home">Home</a></li>
 					<li><a<?php getMenu($url, "accessories") ?> href="<?= INCLUDE_PATH ?>accessories">Accessories</a></li>
 					<li><a<?php getMenu($url, "jewerly") ?> href="<?= INCLUDE_PATH ?>jewerly">Jewerly</a></li>
 					<li><a<?php getMenu($url, "woman") ?> href="<?= INCLUDE_PATH ?>woman">Woman</a></li>
 					<li><a<?php getMenu($url, "man") ?> href="<?= INCLUDE_PATH ?>man">Man</a></li>
 					<li><a<?php getMenu($url, "children") ?> href="<?= INCLUDE_PATH ?>children">Children</a></li>
-					<li><a<?php getMenu($url, "new-acount") ?> href="<?= INCLUDE_PATH ?>new-account"><i class="far fa-user"></i></a></li>
+					<?php if (!(isset($_SESSION["login"]))) { ?>
+						<li><a<?php getMenu($url, "signin") ?> href="<?= INCLUDE_PATH ?>signin"><i class="far fa-user"></i></a></li>
+					<?php } else { ?>
+						<li><a<?php getMenu($url, "account") ?> href="<?= INCLUDE_PATH ?>account"><i class="far fa-user"></i></a></li>
+					<?php } ?>
 					<li><a<?php getMenu($url, "cart") ?> href="<?= INCLUDE_PATH ?>cart"><i class="far fa-shopping-cart"></i></a></li>
 				</ul>
 			</nav>
@@ -78,7 +85,7 @@
 	?>
 
 	<footer>
-		<div class="start">
+		<div <?php if ($url == "account" || "signin" || "signup") { echo "style=\"display: none;\""; } ?> class="start">
 			<div class="center">
 				<div class="section">
 					<h2>Contact Us</h2>

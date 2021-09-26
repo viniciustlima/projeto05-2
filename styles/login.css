@@ -1,0 +1,94 @@
+:root {
+	--color-primary: #ffffff;
+	--color-secondary: #eaeaea;
+	--color-error: #cc3333;
+	--color-success: #4bb544;
+	--border-radius: 4px;
+}
+
+section.new-acc {
+	height: calc(100% - 151px);
+	position: relative;
+}
+
+section.new-acc form.form {
+	width: 90%;
+	max-width: 500px;
+	padding: 15px 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section.new-acc form.form h2.form__title {
+	text-align: center;
+	font-size: 30px;
+	font-weight: 400;
+	color: #2b2b2b;
+}
+
+section.new-acc form.form .form__message.form__message--error {
+	/*display: none;*/
+	color: var(--color-error);
+	font-size: 17px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+section.new-acc form.form .form__input-group {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	margin: 10px auto;
+}
+
+section.new-acc form.form .form__input-group label {
+	color: #2b2b2b;
+	font-size: 19px;
+	font-weight: 300;
+}
+
+section.new-acc form.form .form__input-group input.form__input {
+	width: 100%;
+	height: 37px;
+	padding: 0 15px;
+	border: 1px solid #c4c4c4;
+	font-size: 17px;
+}
+
+section.new-acc form.form .form__input-group .form__input-error-message {
+	display: none;
+	color: var(--color-error);
+	font-size: 17px;
+}
+
+section.new-acc form.form button.form__button {
+	display: block;
+	width: 100%;
+	max-width: 300px;
+	height: 40px;
+	background-color: #c4c4c4;
+	border: 0;
+	font-size: 18px;
+	text-align: center;
+	margin: 10px auto;
+	cursor: pointer;
+}
+
+section.new-acc form.form .form__text {
+	margin: 8px 0;
+	color: #2b2b2b;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: center;
+}
+
+section.new-acc form.form .form__text .form__link {
+	text-decoration: none;
+	color: #2b2b2b;
+}
+
+section.new-acc form.form .form__text .form__link:hover {
+	text-decoration: underline;
+}
