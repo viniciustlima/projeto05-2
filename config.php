@@ -1,18 +1,19 @@
 <?php 
 	session_start();
-  date_default_timezone_set('America/Sao_Paulo');
+  date_default_timezone_set("America/Sao_Paulo");
   
   $auto_load = function ($class) {
-    if ($class == 'Email') {
-      require_once('classes/vendor/phpmailer/phpmailer/src/PHPMailer.php');
+    if ($class == "Email") {
+      require_once "classes/vendor/phpmailer/phpmailer/src/PHPMailer.php";
     }
-    include('classes/'.$class.'.php');
+    include "classes/$class.php";
   };
   
   spl_autoload_register($auto_load);
 
   define("INCLUDE_PATH", "http://10.0.0.62/projeto05-2/");
   define("INCLUDE_PATH_DASHBOARD", INCLUDE_PATH."admin/");
+  define("BASE_DIR_DASHBOARD", __DIR__."/admin");
 
   $config = parse_ini_file("{$_SERVER["DOCUMENT_ROOT"]}/projeto05-2/config.ini", true);
 
@@ -28,7 +29,7 @@
 
   function getMenu($url, $page) {
   	if ($url == $page) {
-			echo ' style="font-weight: 700;"';
+			echo " style=\"font-weight: 700;\"";
   	} else {
   		return;
   	}
@@ -56,7 +57,7 @@
 
   function selectedMenu($arg) {
     $url = explode("/", @$_GET["url"])[0];
-    if ($url == $arg) echo "class=\"selected-menu\"";
+    if ($url == $arg) echo " class=\"selected-menu\"";
   }
 
   function verifyPermission($permission) {
@@ -70,7 +71,7 @@
     if ($_SESSION["admin_role"] >= $permission) {
       return;
     } else {
-      include("dashboard/pages/permissao-negada.php");
+      include "dashboard/pages/permissao-negada.php";
       die();
     }
   }

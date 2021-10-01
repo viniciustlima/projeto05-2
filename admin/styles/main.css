@@ -1,30 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap");
 @import "./boot.css";
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: Roboto, sans-serif;
-}
-
-html,
-body {
-	height: 100%;
-}
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #5b5b5b; cursor: pointer; }
+::-webkit-scrollbar-thumb { background: #1b1b1b; transition: .15s; }
+::-webkit-scrollbar-thumb:hover { background: #0b0b0b; }
+* {	font-family: Roboto, sans-serif; }
 
 body {
 	position: relative;
 	background-color: #eaeaea;
-}
-
-input, input:focus,
-textarea, textarea:focus {
-	outline: 0;
-}
-
-body {
-	background: rgb(225, 225, 225) !important;
 }
 
 header {
@@ -40,7 +25,7 @@ header .button a {
 	font-size: 22px;
 	padding: 10px 15px;
 	text-decoration: none;
-	transition: .25s;
+	transition: .15s;
 }
 
 header .button a:hover {
@@ -120,14 +105,23 @@ aside .menu-items a {
 	font-weight: 300;
 	padding: 20px 15px;
 	text-decoration: none;
+	transition: .15s;
+}
+
+aside .menu-items a:hover {
+	background: #3b3b3b;
 }
 
 aside .menu-items a:not(:last-child) {
-	border-bottom: 1px solid #3b3b3b;
+	border-bottom: 1px solid #4b4b4b;
 }
 
 aside .menu-items a.selected-menu {
 	background-color: #1b1b1b;
+}
+
+aside .menu-items a.selected-menu:hover {
+	background-color: #0b0b0b;
 }
 
 aside .menu-items i,
@@ -148,7 +142,7 @@ main .main__box {
 	padding: 15px 2%;
   margin-top: 1%;
   border-radius: 10px;
-  box-shadow: 4px 6px 10px 1px rgb(205, 205, 205);
+  box-shadow: 4px 4px 4px rgb(205, 205, 205);
 }
 
 main .main__box p {
@@ -198,3 +192,200 @@ main .main__box table td {
 main .main__box table td img {
   width: 80px;
 }
+
+main .main__box canvas {
+	width: 100%;
+	height: 100%;
+}
+
+main .main__box .info__box {
+	padding: 15px;
+}
+
+main .main__box .info__box .wrapper {
+	padding: 20px 25px;
+}
+
+main .main__box .info__box .wrapper h2 {
+	font-size: 28px;
+	font-weight: 400;
+	color: #fff;
+}
+
+main .main__box .info__box .wrapper p {
+	font-size: 20px;
+	font-weight: 300;
+	color: #fff;
+}
+
+main .main__box form.form {
+  margin: 30px 0;
+}
+
+main .main__box form.form .form__input-group label {
+  font-size: 19px;
+  font-weight: 300;
+  color: #444;
+  display: block;
+}
+
+#showPasswd span {
+  cursor: pointer;
+  padding: 5px 8px;
+}
+
+main .main__box form.form .form__input-group {
+  margin: 15px 0;
+  position: relative;
+}
+
+main .main__box form.form .form__input-group .image {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  text-align: center;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  border: 2px solid #2b2b2b;
+}
+
+main .main__box form.form .form__input-group span {
+  position: absolute;
+  margin-top: 20px;
+  right: 8px;
+  cursor: pointer;
+  padding: 5px 8px;
+}
+
+main .main__box form.form .form__input-group .form__input {
+  width: 100%;
+  height: 50px;
+  margin-top: 8px;
+  padding: 0 10px;
+  color: #444;
+  border: 1px solid #ccc;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+main .main__box form.form input[type=file] {
+  margin-top: 8px;
+  display: none;
+}
+
+main .main__box form.form .form__input-group textarea {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #444;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+main .main__box form.form label#image-label {
+  width: 200px;
+  height: 55px;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: .25s;
+  border: 1px solid #333;
+  font-size: 17px;
+}
+
+main .main__box form.form label#image-label:hover {
+  color: #333;
+  background-color: #fff;
+}
+
+main .main__box form.form .form__button {
+  width: 200px;
+  height: 55px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #66bb6a;
+  color: #f5f5f5;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .25s;
+  border: 1px solid #66bb6a;
+  text-decoration: none;
+}
+
+main .main__box form.form .form__button a {
+	text-decoration: none;
+	color: #f5f5f5;
+	display: block;
+}
+
+main .main__box form.form .form__button:hover {
+  color: #66bb6a;
+  background-color: #fff;
+}
+
+main .main__box form.form .form__button:hover a {
+	color: #66bb6a;
+}
+
+main .main__box form.form select {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: normal;
+  color: #444;
+  width: 100%;
+  height: 50px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+}
+
+main .main__box form.form select option {
+  font-size: 16px;
+  font-weight: normal;
+  color: #444;
+  width: 100%;
+  height: 50px;
+}
+
+main .main__box .action__box {
+	width: 100%;
+	border: 3px solid #eaeaea;
+	border-radius: 10px;
+	transition: .15s;
+	cursor: pointer;
+	margin: 10px 0;
+}
+
+main .main__box .action__box:hover {
+	background: #eaeaea;
+}
+
+main .main__box .action__box a {
+	text-decoration: none;
+	padding: 10px 15px;
+	display: block;
+	width: 100%;
+}
+
+main .main__box .alert__message {
+	width: 100%;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 20px;
+  color: #f5f5f5;
+  margin-bottom: 8px;
+}
+
+main .main__box .alert__message.message-success { background-color: #a5d6a7; }
+main .main__box .alert__message.message-error { background-color: #f75353; }
+main .main__box .alert__message.message-warn { background-color: #ffc107; }

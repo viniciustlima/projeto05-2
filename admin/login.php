@@ -15,7 +15,7 @@
 				if (isset($_POST["admin"])) {
 					$username = $_POST["username"];
 					$password = $_POST["password"];
-					if ($admin_username == "" && $password == "") {
+					if ($username == "" && $password == "") {
 						echo "<div class=\"form__message form__message--error\">You can't login in an account without an username and password.</div>";
 					} else if ($username == "") {
 						echo "<div class=\"form__message form__message--error\">You can't login without an username.</div>";

@@ -35,13 +35,34 @@
     }
 
     public static function Alert($type, $message) {
-      if ($type == "sucesso") {
+      if ($type == "success") {
         echo "<div class=\"alert__message message-success\"><i class=\"far fa-check\"></i> {$message}</div>";
-      } else if ($type == "erro") {
+      } else if ($type == "error") {
         echo "<div class=\"alert__message message-error\"><i class=\"far fa-times\"></i> {$message}</div>";
       } else if ($type == "warn") {
         echo "<div class=\"alert__message message-warn\"><i class=\"far fa-times\"></i> {$message}</div>";
       }
+    }
+
+    public static function validateImage($image) {
+      if ($image["type"] == "image/jpeg") {
+        $imageSize = intval($image["size"]/1024);
+        if ($imageSize < 300) return true;
+        return false;
+      }
+      
+      return false;
+    } 
+
+    public static function uploadFile($file) {
+      $fileType = explode(".", $file["name"]);
+      $imageName = uniqid().".".$fileType[count($fileType) - 1];
+      if (move_uploaded_file($file["tmp_name"], BASE_DIR_DASHBOARD."/uploads/{$imageName}")) return $imageName;
+      return false;
+    }
+
+    public static function deleteFile($file) {
+      @unlink("uploads/".$file);
     }
 
 	}

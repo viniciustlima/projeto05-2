@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-	<title>Admin Dashboard - Projeto05</title>	
+	<title>Admin Dashboard &#8211; Projeto05</title>	
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -17,32 +17,17 @@
 
 	<aside>
 		<div class="user">
-			<div onclick="location.href='<?= INCLUDE_PATH_DASHBOARD ?>editar-usuario'" style="cursor: pointer" class="avatar">
-			<?php 
-				if (isset($_SESSION["admin_photo"])) {
-					if (file_exists("uploads/{$_SESSION["admin_photo"]}")) {
-						echo '<img src="'.INCLUDE_PATH_DASHBOARD.'uploads/'.$_SESSION["admin_photo"].'" alt="'.$_SESSION["admin_name"].'" title="'.$_SESSION["admin_name"].'">';
-					} else {
-						echo '<i class="far fa-user"></i>';
-					}
-				} else {
-					echo '<i class="far fa-user"></i>';
-				}
-			?>
-			</div>
+			<div class="avatar"><?= getCargoIcon($_SESSION["admin_role"]) ?></div>
 			<p class="nome"><?= $_SESSION["admin_name"]; ?></p>
 			<p><?= getCargo($_SESSION["admin_role"]); ?></p>
 		</div>
 		<div class="menu-items">
-			<a <?= selectedMenu("") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>dashboard"><i class="fal fa-chart-pie"></i> Dashboard</a>
-			<a <?= selectedMenu("profile") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>profile"><i class="fal fa-user"></i> Profile</a>
-			<a <?= selectedMenu("tables") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>tables"><i class="fal fa-table"></i> Tables</a>
-			<a <?= selectedMenu("products") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>products"><i class="fal fa-tshirt"></i> Products</a>
-			<a <?= selectedMenu("orders") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>orders"><i class="fal fa-money-bill-wave"></i> Orders</a>
-
-			<div <?php verifyPermission(1) ?> class="admin">
-				<a <?php verifyPermission(1) ?><?= selectedMenu("admin") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>admin"><span class="fal fa-user-tie"></span> Admin</a>
-			</div>
+			<a<?= selectedMenu("") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>dashboard"><i class="fal fa-chart-pie"></i> Dashboard</a>
+			<a<?= selectedMenu("profile") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>profile"><i class="fal fa-user"></i> Profile</a>
+			<a<?= selectedMenu("tables") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>tables"><i class="fal fa-table"></i> Tables</a>
+			<a<?= selectedMenu("products") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>products"><i class="fal fa-tshirt"></i> Products</a>
+			<a<?= selectedMenu("orders") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>orders"><i class="fal fa-money-bill-wave"></i> Orders</a>
+			<a<?php verifyPermission(1) ?><?= selectedMenu("admin") ?> href="<?= INCLUDE_PATH_DASHBOARD ?>admin"><i class="fal fa-user-tie"></i> Admin</a>
 		</div>
 	</aside>
 	<header>
